@@ -1,0 +1,3 @@
+Operating System: Windows 10 Home 64-bit (10.0, Build 14393) (14393.rs1_release.161220-1747)
+                Processor: Intel(R) Core(TM) i3-5005U CPU @ 2.00GHz (4 CPUs), ~2.0GHz
+                   Memory: 4096MB RAM
