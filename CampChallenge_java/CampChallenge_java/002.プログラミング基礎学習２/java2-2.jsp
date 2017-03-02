@@ -1,11 +1,10 @@
 <%-- 
-    Document   : java基礎1-
-    Created on : 2017/03/02, 11:09:53
+    Document   : java2-
+    Created on : 2017/03/02, 16:05:03
     Author     : guest1Day
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,16 +12,16 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
 <%
-String g="A";String mes=" ";
+char g='A';String mes=" ";
 switch(g){
-    case "A":
+    case 'A':
         mes="英語";
         break;
-    case "あ":
+    case 'あ':
         mes="日本語";
         break;
-
 }
 out.print(mes);
 %>
