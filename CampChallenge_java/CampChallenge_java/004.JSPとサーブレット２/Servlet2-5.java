@@ -24,8 +24,7 @@ String getMyProfile(){
         return"増田尚輝"+"<br>"+"1995.3.16"+"<br>"+"よろしくお願いします"+"<br>";
     }
 boolean Type(){
-    boolean type=true;
-        return type;
+        return true;
 }
 String profile=getMyProfile();
 boolean boo=Type();
