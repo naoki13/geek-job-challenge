@@ -21,32 +21,18 @@ import java.util.ArrayList;
 @WebServlet(name = "Servlet2", urlPatterns = {"/Servlet2"})
 public class Servlet2 extends HttpServlet {
     
-
+    String A="堂島"+"<br>";
+    String AA="1.28"+"<br>";
+    String AAA="豊島区"+"<br>"+"<br>";
     
-    String getPro1(){
-    String name1="山田";
-    String birth1="1.23";
-    String ad1="東京";
-    String pro1=name1+"<br>"+birth1+"<br>"+ad1+"<br>"+"<br>";
-    return pro1;
-}
-
-    String getPro2(){
-    String name2="田中";
-    String birth2="4.5";
-    String ad2="大阪";
-    String pro2=name2+"<br>"+birth2+"<br>"+ad2+"<br>"+"<br>";
-    return pro2;
-}
-    String getPro3(){
-    String name3="鈴木";
-    String birth3="6.7";
-    String ad3=null;
-    String pro3=name3+"<br>"+birth3+"<br>"+ad3+"<br>"+"<br>";
-    return pro3;
-}
-
+    String B="神崎"+"<br>";
+    String BB="5.21"+"<br>";
+    String BBB="港区"+"<br>"+"<br>";
     
+    String C="飯田"+"<br>";
+    String CC="9.1"+"<br>";
+    String CCC=null;
+      
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -56,6 +42,7 @@ public class Servlet2 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -70,21 +57,24 @@ public class Servlet2 extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            String A=getPro1();
-            String B=getPro2();
-            String C=getPro3();
-            
-            ArrayList<String>al=new ArrayList<>();
-            al.add(A);
-            al.add(B);
-            al.add(C);
-            
-            for(int i=0;i<al.size();i++){
-                if(al.get(i)== null){
-                continue;
-                }
-            out.print(al.get(i));
-            }
+          ArrayList<String>al=new ArrayList<>();
+    al.add(A);
+    al.add(AA);
+    al.add(AAA);
+    al.add(B);
+    al.add(BB);
+    al.add(BBB);
+    al.add(C);
+    al.add(CC);
+    al.add(CCC);
+    
+    for(int i=0;i<al.size();i++){
+        if(al.get(i)==null){
+            continue;
+        }
+        
+    out.print(al.get(i));
+    }
             out.println("</body>");
             out.println("</html>");
         
