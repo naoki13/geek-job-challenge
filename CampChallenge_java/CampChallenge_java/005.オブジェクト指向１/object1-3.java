@@ -21,16 +21,20 @@ import javax.servlet.http.HttpServletResponse;
 public class object extends HttpServlet {
     
     class Player{
+        //プレイヤークラスを作成
         public int back=0;
-        public int age= 0;
+        public int age1= 0;
+        //背番号と年齢を定義
         public void getAge(int age){
-            this.age=age;
+            age1=age;
         }
+        //プレイヤークラスに設定されている年齢を後に入力される値に更新するためのメソッド
         public void getBack(int back){
             this.back=back;
         }
+        //同上
         public void printAge(PrintWriter out){
-            out.print(age);
+            out.print(age1);
         }
         public void printBack(PrintWriter out){
             out.print(back);
@@ -62,12 +66,13 @@ public class object extends HttpServlet {
             out.println("<body>");
             
             Player Pogba=new Player();
+            
             Pogba.getAge(22);
             Pogba.getBack(19);
+            
             Pogba.printAge(out);
             out.print("<br>");
             Pogba.printBack(out);
-            
             
             out.println("</body>");
             out.println("</html>");
