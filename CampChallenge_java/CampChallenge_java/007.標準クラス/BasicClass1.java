@@ -21,7 +21,6 @@ import java.util.*;
 @WebServlet(name = "BasicClass", urlPatterns = {"/BasicClass"})
 public class BasicClass extends HttpServlet {
     
-    Date date=new Date();
     
 
     /**
@@ -45,7 +44,10 @@ public class BasicClass extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            out.print(date.getTime());
+            Calendar cal=Calendar.getInstance();
+            cal.set(2016,1,1,0,0,0);
+            Date calpast=cal.getTime();
+            out.print(calpast.getTime());
             
             out.println("</body>");
             out.println("</html>");
