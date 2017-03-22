@@ -1,9 +1,7 @@
 <%-- 
-    Document   : dataope
-    Created on : 2017/03/22, 10:29:58
+    Document   : dataope1
+    Created on : 2017/03/22, 12:56:11
     Author     : guest1Day
-以下の入力フィールドを持ったHTMLを、Javaで処理する想定で記述してください。
-・名前（テキストボックス）、性別（ラジオボタン）、趣味（複数行テキストボックス）
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,16 +12,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="./dataope.jsp" method="post">
-            名前:<input type="text" name="txtname">
-            <br>
-            性別:
-            男性<input type="radio" name="rdoname">
-            女性<input type="radio" name="rdoname">
-            <br>
-            趣味:<textarea name="txaname"></textarea>
+        <%
+            request.setCharacterEncoding("UTF-8");
             
-            <input type="submit" value="送信">
-        </form>
+            String n=request.getParameter("N");
+            String s=request.getParameter("M");
+            String se=request.getParameter("F");
+            String syu=request.getParameter("Fa");
+            
+            out.print(n);
+            out.print("<br>");
+            out.print(s);
+            out.print("<br>");
+            out.print(se);
+            out.print("<br>");
+            out.print(syu);
+            %>
     </body>
 </html>
